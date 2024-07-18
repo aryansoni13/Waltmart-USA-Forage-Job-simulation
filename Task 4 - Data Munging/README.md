@@ -1,12 +1,17 @@
-Your task is to implement a novel data structure - your project lead is calling it a power of two max heap. The rest of your team is doing their best to come up with a better name. The requirements of the data structure are as follows:
+1. Part 1: Get the data
 
--The heap must satisfy the heap property.
--Every parent node in the heap must have 2^x children.
--The value of x must be a parameter of the heap’s constructor.
--The heap must implement an insert method.
--The heap must implement a pop max method.
--The heap must be implemented in Java.
--The heap must be performant.
+- First, you need to get your hands on the relevant data. The shipping department has been kind enough to provide you with a repository containing all of their spreadsheets, as well as a copy of the sqlite database. First, fork and clone the repository at: https://github.com/theforage/forage-walmart-task-4
 
-You must use a more descriptive variable name than x in your implementation.
-Think carefully about how you implement each method, and manage the underlying data. Performance is critical, so keep cycles and memory usage to a minimum. Be sure to test your heap with very small and very large values of x. As always, keep a weather eye out for sneaky edge cases. 
+2. Part 2: Populate the database
+
+- Your task is to insert all of the data contained in the provided spreadsheets into the SQLite database. You will write a Python script which:
+
+Reads each row from the spreadsheets.
+
+    - Extracts the relevant data.
+
+    -Munges it into a format that fits the database schema.
+
+    -Inserts the data into the database.
+
+Spreadsheet 0 is self contained and can simply be inserted into the database, but spreadsheets 1 and 2 are dependent on one another. Spreadsheet 1 contains a single product per row, you will need to combine each row based on its shipping identifier, determine the quantity of goods in the shipment, and add a new row to the database for each product in the shipment. The origin and destination for each shipment in spreadsheet 1 are contained in spreadsheet 2. You may assume that all the given data is valid - product names are always spelled the same way, quantities are positive, etc. 
