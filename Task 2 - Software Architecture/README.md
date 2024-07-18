@@ -7,15 +7,24 @@ DatabaseIdentifier: an enum used to identify a database connection.
 Here are the requirements for your design:
 
 - The processor must implement a configure method that accepts a ModeIdentifier and a DatabaseIdentifier as parameters.
+        
         - This method is called to change the operating mode of the processor, and/or select the current database.
 - The processor must be able to change between the following modes:
+        
         - Dump mode: simply drops the data.
+        
         - Passthrough mode: inserts the data into the currently configured database.
+        
         - Validate mode: validates the data, then inserts it (both operations are carried out on the currently configured database).
 - The processor must be able to swap between the following databases. Each database will require a different implementation to insert and validate data
+        
         - Postgres.
+        
         - Redis.
+        
         - Elastic.
 - The processor must implement a process method that accepts a DataPoint as a parameter.
+        
         -This method will have different behavior depending on the currently configured mode and database.
+
 There is no need to get into implementation specifics, keep things abstract and high level. For example, you need only specify connect, insert, and validate methods for each database, there is no need to specify how those methods go about performing their verbs. The point of this task is to think about how code is structured. 
