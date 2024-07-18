@@ -19,4 +19,4 @@ This repository contains my solutions for the Advanced Software Engineering Virt
 <h2>Acknowledgments</h2>
 <p>I am grateful to Walmart and TheForage for offering this valuable opportunity to gain practical experience in advanced software engineering. Their dedication to promoting learning and growth is greatly appreciated.</p>
 <h1> My Certificate of Completion </h1>
-<img src="https://github.com/aryansoni13/Waltmart-USA-Forage-Job-simulation/blob/a4c3607880039289a6bea7dbb86b0096b87f58e9/Walmart%20USA.pdf" alt="certificate of completion"/>
+<img src="https://github.com/aryansoni13/Waltmart-USA-Forage-Job-simulation/blob/76c20af4363f3d2d0d75165eee8af075bcb88704/Walmart%20USA-1.png" alt="certificate of completion"/>
